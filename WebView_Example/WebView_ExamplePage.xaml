@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage 
+	xmlns="http://xamarin.com/schemas/2014/forms" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+	xmlns:local="clr-namespace:WebView_Example" 
+	x:Class="WebView_Example.WebView_ExamplePage">
+	<ContentPage.Padding>
+		<OnPlatform x:TypeArguments="Thickness" iOS="0,20,0,0"/>
+	</ContentPage.Padding>
+	<AbsoluteLayout>
+		<WebView 
+			Source="https://www.google.com.tw" 
+			AbsoluteLayout.LayoutFlags="All" 
+			AbsoluteLayout.LayoutBounds="1,1,1,1"
+			Navigating="Handle_Navigating"
+			Navigated="Handle_Navigated"/>
+		<ActivityIndicator 
+			x:Name="xActivityIndicator"
+			Color="Black" 
+			AbsoluteLayout.LayoutFlags="All" 
+			AbsoluteLayout.LayoutBounds="0.5,0.5,1,1"/>
+	</AbsoluteLayout>
+</ContentPage>
